@@ -1,9 +1,10 @@
 function Mostrar() {
 
     var clave;
-    do {
-        clave = prompt("ingrese el número clave.");
+    clave = prompt("Ingrese el número clave.");
+    while (clave != "utn750")//LA CONDICION TAMBIEN PUEDE SER !(clave=="unt750")
+    {
+        clave = prompt("Error, ingrese la clave nuevamente.");
     }
-    while (clave != "utn750")
     console.log("Correcto!");
 }//FIN DE LA FUNCIÓN
