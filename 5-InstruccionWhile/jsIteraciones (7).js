@@ -11,7 +11,7 @@ function Mostrar() {
 		respuesta = prompt("¿Quiere continuar? <si/no>");
 		contador++;
 	}
-	while (respuesta != "no")
+	while (respuesta != "no");
 	console.log("Contador: " + contador);
 	respuesta = "si"
 	document.getElementById('suma').value = acumulador;
