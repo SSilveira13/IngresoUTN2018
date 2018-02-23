@@ -1,33 +1,28 @@
-function Mostrar()
-{
+function Mostrar() {
 
-	var contador=0;
+
 	// declarar variables
 	var numero;
-	var maximo=0;
-	var minimo=0;
-	var respuesta="si";
-	while(respuesta!="no")
-	{
+	var maximo;
+	var minimo;
+	var respuesta = "si";
+	var flag = 0;
+	do {
 		numero = parseInt(prompt("Ingrese un numero:"));
-		if(numero>maximo)
-		{
+		if (numero > maximo || flag == 0) {
 			maximo = numero;
-			console.log("Nuevo maximo: "+maximo);
 		}
-		else{
-			if(numero<minimo)
-			{
-				minimo = numero;
-				console.log("Nuevo minimo: "+minimo);
-			}
+		if (numero < minimo || flag == 0) {
+			minimo = numero;
+			flag = 1;
 		}
+
 		respuesta = prompt("¿Quiere continuar?<Si/No>");
 		respuesta = respuesta.toLowerCase();
-	}
+	} while (respuesta != "no");
 
-	document.getElementById("maximo").value=maximo;
-	document.getElementById("minimo").value=minimo;
+	document.getElementById("maximo").value = maximo;
+	document.getElementById("minimo").value = minimo;
 
 
 
