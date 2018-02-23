@@ -39,14 +39,14 @@ function Mostrar() {
 		respuesta = prompt("¿Quiere continuar?<Si/No>");
 		respuesta = respuesta.toLowerCase();
 	}
-	console.log("Suma de positivos = " + positivo);
-	console.log("Suma de negativos = " + negativo);
-	console.log("Cantidad de positivos = " + contarpositivos);
-	console.log("Cantidad de negativos = " + contarnegativos);
-	console.log("Cantidad de ceros = " + contarceros);
-	console.log("Cantidad de pares = " + contarpares);
-	console.log("Promedio de positivos = " + positivo / contarpositivos);
-	console.log("Promedio de negativos = " + negativo / contarnegativos);
 	diferencia = positivo + negativo;
-	console.log("Diferencia entre negativos y positivos = " + diferencia);
+	document.write("Suma de positivos = " + positivo + "</br>");
+	document.write("Suma de negativos = " + negativo + "</br>");
+	document.write("Cantidad de positivos = " + contarpositivos + "</br>");
+	document.write("Cantidad de negativos = " + contarnegativos + "</br>");
+	document.write("Cantidad de ceros = " + contarceros + "</br>");
+	document.write("Cantidad de pares = " + contarpares + "</br>");
+	document.write("Promedio de positivos = " + positivo / contarpositivos + "</br>");
+	document.write("Promedio de negativos = " + negativo / contarnegativos + "</br>");
+	document.write("Diferencia entre negativos y positivos = " + diferencia + "</br>");
 }//FIN DE LA FUNCIÓN
