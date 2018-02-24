@@ -5,7 +5,6 @@ function Mostrar() {
 	var contador = 0;
 	//declarar contadores y variables 
 	var numero;
-	var numeropar;
 	var positivo = 0;
 	var negativo = 0;
 	var contarpositivos = 0;
@@ -14,30 +13,34 @@ function Mostrar() {
 	var contarpares = 0;
 	var diferencia;
 	var respuesta = "si";
+	var promediopositivos = 0;
+	var promedionegativos = 0;
 
 	while (respuesta != "no") {
 		numero = parseInt(prompt("Ingrese un numero:"));
-		numeropar = numero % 2;
-		if (numeropar == 0) {
+		if (numero % 2 == 0) {
 			contarpares++;
 		}
 
 		if (numero > 0) {
 			positivo += numero;
-			console.log("Positivos = " + positivo);
 			contarpositivos++;
 		}
 		else if (numero < 0) {
 			negativo += numero;
-			console.log("Negativos = " + negativo);
 			contarnegativos++;
 		}
-		else if (numero == 0) {
+		else {
 			contarceros++;
-			console.log("Cantidad de ceros = " + contarceros);
 		}
 		respuesta = prompt("¿Quiere continuar?<Si/No>");
 		respuesta = respuesta.toLowerCase();
+	}
+	if (promediopositivos != 0) {
+		promediopositivos = positivo / contarpositivos;
+	}
+	if (promedionegativos != 0) {
+		promedionegativos = negativo / contarnegativos;
 	}
 	diferencia = positivo + negativo;
 	document.write("Suma de positivos = " + positivo + "</br>");
@@ -46,7 +49,7 @@ function Mostrar() {
 	document.write("Cantidad de negativos = " + contarnegativos + "</br>");
 	document.write("Cantidad de ceros = " + contarceros + "</br>");
 	document.write("Cantidad de pares = " + contarpares + "</br>");
-	document.write("Promedio de positivos = " + positivo / contarpositivos + "</br>");
-	document.write("Promedio de negativos = " + negativo / contarnegativos + "</br>");
+	document.write("Promedio de positivos = " + promediopositivos + "</br>");
+	document.write("Promedio de negativos = " + promedionegativos + "</br>");
 	document.write("Diferencia entre negativos y positivos = " + diferencia + "</br>");
 }//FIN DE LA FUNCIÓN
