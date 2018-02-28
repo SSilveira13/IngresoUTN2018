@@ -3,7 +3,7 @@ function Mostrar() {
     var divisores;
     var divisorescantidad = 0;
     numero = parseInt(prompt("Ingrese un numero."));
-    for (var i = 1; i < numero; i++) {
+    for (var i = 1; i <= numero; i++) {
         if (numero % i == 0) {
             divisores = i;
             document.write(divisores + " es divisor de " + numero + "</br>");
